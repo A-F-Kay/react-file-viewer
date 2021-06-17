@@ -4,9 +4,13 @@ import React from "react";
 import { ZoomInOutlined, ZoomOutOutlined, UndoOutlined } from "@ant-design/icons";
 import VisibilitySensor from "react-visibility-sensor";
 import { PDFJS } from "pdfjs-dist/build/pdf.combined";
-import "antd/dist/antd.min.css";
 import "pdfjs-dist/web/compatibility";
 import "./../../styles/pdf-viewer.scss";
+
+// Doubles import on projects with antd.
+// TODO: move to peerDependencies(?). Not even sure antd is in use elsewhere
+// import "antd/dist/antd.min.css";
+
 
 PDFJS.disableWorker = true;
 const INCREASE_PERCENTAGE = 0.1;
